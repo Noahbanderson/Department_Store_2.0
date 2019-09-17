@@ -5,9 +5,12 @@ import Home from "./components/Home"
 import About from "./components/About"
 import NoMatch from "./components/NoMatch"
 import Navbar from './components/Navbar'
-import Products from './components/Products'
-import ProductForm from './components/ProductForm'
-import ProductView from './components/ProductView'
+import Departments from './components/Departments'
+import DepartmentForm from './components/DepartmentForm'
+import DepartmentView from './components/DepartmentView'
+import ItemForm from './components/ItemForm'
+import ItemView from './components/ItemView'
+
 
 const App = () => {
   return (
@@ -17,10 +20,14 @@ const App = () => {
       <Switch>
         <Route exact path="/" component={Home} />
         <Route exact path="/about" component={About} />
-        <Route exact path="/products" component={Products} />
-        <Route exact path="/products/new" component={ProductForm} />
-        <Route exact path="/products/:id" component={ProductView} />
-        <Route exact path="/products/:id/edit" component={ProductForm} />                
+        <Route exact path="/departments" component={Departments} />
+        <Route exact path="/departments/new" component={DepartmentForm} />
+        <Route exact path="/departments/:id" component={DepartmentView} />
+        <Route exact path="/departments/:id/edit" component={DepartmentForm} /> 
+        <Route exact path="/departments/:id/items/new" component={ItemForm} /> 
+        <Route exact path="/departments/:id/items/:id" component={ItemView} /> 
+        <Route exact path="/departments/:id/items/:id/edit" component={ItemForm} /> 
+               
         <Route component={NoMatch} />
       </Switch>
     </Container>

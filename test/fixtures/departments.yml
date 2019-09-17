@@ -2,8 +2,8 @@
 
 one:
   name: MyString
-  type: 
+  dep_type: MyString
 
 two:
   name: MyString
-  type: 
+  dep_type: MyString
